@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   title: String,
-  imageurl: String,
+  imageUrl: String,
   price: Number,
   isFavorite: Boolean,
   isAdded: Boolean,
@@ -20,7 +20,7 @@ defineProps({
         alt="like 1"
         @click="onClickFavorite"
       />
-      <img :src="imageurl" alt="sneaker" />
+      <img :src="imageUrl" alt="sneaker" />
       <p class="mt-2">{{ title }}</p>
       <div class="flex justify-between">
         <div class="flex flex-col mt-5">
