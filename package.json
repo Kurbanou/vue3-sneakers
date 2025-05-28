@@ -28,5 +28,18 @@
     "tailwindcss": "^3.4.1",
     "vite": "^6.3.2",
     "vite-plugin-vue-devtools": "^7.7.2"
-  }
+  },
+  "description": "1. Склонировать репозиторий к себе на ПК 2. `npm install` 3. `npm run dev` 4. Готово!",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kurbanou/vue3-sneakers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kurbanou/vue3-sneakers/issues"
+  },
+  "homepage": "https://github.com/Kurbanou/vue3-sneakers#readme"
 }

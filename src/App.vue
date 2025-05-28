@@ -21,7 +21,7 @@ const onChangeSearInput = (event) => {
 
 const fetchFavorites = async () => {
   try {
-    const { data: favorites } = await axios.get('https://604781a0efa572c1.mokky.dev/favorites')
+    const { data: favorites } = await axios.get('https://2bff9a7c672313b2.mokky.dev/favorites')
 
     items.value = items.value.map((item) => {
       const favorite = favorites.find((favorite) => favorite.productId === item.id)
@@ -46,12 +46,12 @@ const addToFavorite = async (item) => {
       const obj = {
         parentId: item.id,
       }
-      const { data } = await axios.post('https://604781a0efa572c1.mokky.dev/favorites', obj)
+      const { data } = await axios.post('https://2bff9a7c672313b2.mokky.dev/favorites', obj)
       item.isFavorite = true
       item.favoriteId = data.id
       console.log(data)
     } else {
-      await axios.delete(`https://604781a0efa572c1.mokky.dev/favorites/${item.favoriteId}`)
+      await axios.delete(`https://2bff9a7c672313b2.mokky.dev/favorites/${item.favoriteId}`)
       item.isFavorite = false
       item.favorite = null
     }
@@ -69,7 +69,7 @@ const fetchItems = async () => {
     if (filters.searchQuery) {
       params.title = `*${filters.searchQuery}*`
     }
-    const { data } = await axios.get('https://604781a0efa572c1.mokky.dev/items', {
+    const { data } = await axios.get('https://2bff9a7c672313b2.mokky.dev/items', {
       params,
     })
 
